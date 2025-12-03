@@ -149,7 +149,7 @@ const CollectionSelector = () => {
               key={collection.name}
               onClick={() => handleCollectionSelect(collection.name)}
               className={clsx(
-                'relative flex-1 px-4 py-3 rounded-2xl transition-colors duration-0',
+                'relative flex-1 px-4 py-3 rounded-2xl transition-colors duration-0 hover:cursor-pointer',
                 'flex flex-col items-center justify-center gap-1',
                 isSelected
                   ? 'bg-[var(--main-color)]/80 text-[var(--background-color)] shadow-sm border-b-4 border-[var(--main-color-accent)]'
@@ -229,7 +229,7 @@ const CollectionSelector = () => {
                 setSelectedGameMode(gameMode);
               }}
               className={clsx(
-                'relative flex-1 px-4 py-3 rounded-2xl transition-colors duration-0',
+                'relative flex-1 px-4 py-3 rounded-2xl transition-colors duration-0 hover:cursor-pointer',
                 'flex flex-col items-center justify-center gap-2',
                 isSelected
                   ? 'bg-[var(--main-color)]/80 text-[var(--background-color)] shadow-sm border-b-4 border-[var(--main-color-accent)]'
