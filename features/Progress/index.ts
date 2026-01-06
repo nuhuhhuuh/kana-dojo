@@ -7,14 +7,19 @@ export {
   useGameStats,
   useStatsDisplay,
   useSessionStats,
-  useTimedStats
+  useTimedStats,
+  statsTracking,
+  progressBackup
 } from './facade';
 export type {
   GameStats,
   GameStatsActions,
   StatsDisplay,
   SessionStats,
-  TimedStats
+  TimedStats,
+  RecordGauntletRunParams,
+  RecordBlitzSessionParams,
+  StatsStoreState
 } from './facade';
 
 // Components (page-level)

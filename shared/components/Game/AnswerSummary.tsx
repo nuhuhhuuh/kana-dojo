@@ -1,12 +1,12 @@
 import clsx from 'clsx';
 import { toKana, toRomaji } from 'wanakana';
-import { IKanjiObj } from '@/features/Kanji/store/useKanjiStore';
-import { IVocabObj } from '@/features/Vocabulary/store/useVocabStore';
+import type { IKanjiObj } from '@/features/Kanji';
+import type { IVocabObj } from '@/features/Vocabulary';
 import { CircleArrowRight } from 'lucide-react';
 import { Dispatch, SetStateAction, useRef, useEffect } from 'react';
 import { useClick } from '@/shared/hooks/useAudio';
 import FuriganaText from '@/shared/components/text/FuriganaText';
-import usePreferencesStore from '@/features/Preferences/store/usePreferencesStore';
+import { useThemePreferences } from '@/features/Preferences';
 import { ActionButton } from '@/shared/components/ui/ActionButton';
 
 // Type guard
@@ -159,7 +159,7 @@ const VocabSummary = ({
   buttonRef: React.RefObject<HTMLButtonElement | null>;
   isEmbedded?: boolean;
 }) => {
-  const showKana = usePreferencesStore(state => state.displayKana);
+  const { displayKana: showKana } = useThemePreferences();
   const rawReading = payload.reading || '';
   const baseReading = rawReading.split(' ')[1] || rawReading;
   const displayReading = showKana ? toKana(baseReading) : toRomaji(baseReading);
