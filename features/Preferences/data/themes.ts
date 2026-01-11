@@ -955,7 +955,12 @@ const baseThemeSets: BaseThemeGroup[] = [
         mainColor: 'oklch(78.0% 0.155 140.0 / 1)',         // moss green
         secondaryColor: 'oklch(65.0% 0.110 190.0 / 1)',    // twilight leaf
       },
-
+     {
+  id: 'kuroyuri',
+  backgroundColor: 'oklch(23.8% 0.041 270.0 / 1)',    // velvet graphite
+  mainColor: 'oklch(91.5% 0.212 120.0 / 1)',           // pear green
+  secondaryColor: 'oklch(80.0% 0.158 340.0 / 1)',      // smoky plum
+      },
     ]
   },
   {
